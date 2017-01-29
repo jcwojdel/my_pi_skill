@@ -1,0 +1,218 @@
+[
+{
+"name": "PLAY_3",
+"event":
+
+{
+  "session": {
+    "sessionId": "SessionId.85cdfc14-a200-4284-ad61-d3de3761c6e2",
+    "application": {
+      "applicationId": "amzn1.ask.skill.241dd49d-f4b0-4d82-aa01-9b4ebe395bea"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AEX5LWI36SNWPZTBBABCDNABD55ZAYB6SQ643FPSS3UDWE6ZWJ4IQQOMIQWQV6U4YZTF2D3YTJUTBY7JFAAQDFVASYZVWBMNHO4JWUR7MC7VTDF3YBZI65DUMKBSQ3YFBORBCMMIDOKI45U5NGJSP5WDX2UMND3IDSB3WNNCBN2KBQH56DWTVIGR52VYHR4WR7FUSOKO74UXGII"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.6baad341-4136-46e4-9ce2-bd65688ead1e",
+    "locale": "en-GB",
+    "timestamp": "2017-01-17T21:37:27Z",
+    "intent": {
+      "name": "PlayPolishRadioIntent",
+      "slots": {
+        "Number": {
+          "name": "Number",
+          "value": "3"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
+
+},
+{
+"name": "STOP",
+"event":
+
+{
+  "session": {
+    "sessionId": "SessionId.c9d676c1-6c02-4f5b-8217-2d37749e0ca0",
+    "application": {
+      "applicationId": "amzn1.ask.skill.241dd49d-f4b0-4d82-aa01-9b4ebe395bea"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AEX5LWI36SNWPZTBBABCDNABD55ZAYB6SQ643FPSS3UDWE6ZWJ4IQQOMIQWQV6U4YZTF2D3YTJUTBY7JFAAQDFVASYZVWBMNHO4JWUR7MC7VTDF3YBZI65DUMKBSQ3YFBORBCMMIDOKI45U5NGJSP5WDX2UMND3IDSB3WNNCBN2KBQH56DWTVIGR52VYHR4WR7FUSOKO74UXGII"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.0c12ac90-60b9-48d0-acae-26ca219f4e68",
+    "locale": "en-GB",
+    "timestamp": "2017-01-17T21:39:31Z",
+    "intent": {
+      "name": "StopRadioIntent",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}
+
+},
+{
+"name": "VOLUME_UP",
+"event":
+
+
+{
+  "session": {
+    "sessionId": "SessionId.d615f97e-1086-4827-a39e-fe4a634a2125",
+    "application": {
+      "applicationId": "amzn1.ask.skill.241dd49d-f4b0-4d82-aa01-9b4ebe395bea"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AEX5LWI36SNWPZTBBABCDNABD55ZAYB6SQ643FPSS3UDWE6ZWJ4IQQOMIQWQV6U4YZTF2D3YTJUTBY7JFAAQDFVASYZVWBMNHO4JWUR7MC7VTDF3YBZI65DUMKBSQ3YFBORBCMMIDOKI45U5NGJSP5WDX2UMND3IDSB3WNNCBN2KBQH56DWTVIGR52VYHR4WR7FUSOKO74UXGII"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.dfb1e00b-a701-4bfd-ae97-893bb67d0aef",
+    "locale": "en-GB",
+    "timestamp": "2017-01-17T21:42:37Z",
+    "intent": {
+      "name": "VolumeUpIntent",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}
+
+},
+{
+"name": "VOLUME_DOWN",
+"event":
+
+{
+  "session": {
+    "sessionId": "SessionId.a6844198-94f8-406e-a585-cf1ec535675b",
+    "application": {
+      "applicationId": "amzn1.ask.skill.241dd49d-f4b0-4d82-aa01-9b4ebe395bea"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AEX5LWI36SNWPZTBBABCDNABD55ZAYB6SQ643FPSS3UDWE6ZWJ4IQQOMIQWQV6U4YZTF2D3YTJUTBY7JFAAQDFVASYZVWBMNHO4JWUR7MC7VTDF3YBZI65DUMKBSQ3YFBORBCMMIDOKI45U5NGJSP5WDX2UMND3IDSB3WNNCBN2KBQH56DWTVIGR52VYHR4WR7FUSOKO74UXGII"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.adda4ed7-41ec-4ae9-b416-48054e24a88e",
+    "locale": "en-GB",
+    "timestamp": "2017-01-17T21:43:50Z",
+    "intent": {
+      "name": "VolumeDownIntent",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}
+
+},
+{
+"name": "VOLUME_MAX",
+"event":
+
+{
+  "session": {
+    "sessionId": "SessionId.4bc84d09-a9b4-4a76-bbfd-9239cfabbeaf",
+    "application": {
+      "applicationId": "amzn1.ask.skill.241dd49d-f4b0-4d82-aa01-9b4ebe395bea"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AEX5LWI36SNWPZTBBABCDNABD55ZAYB6SQ643FPSS3UDWE6ZWJ4IQQOMIQWQV6U4YZTF2D3YTJUTBY7JFAAQDFVASYZVWBMNHO4JWUR7MC7VTDF3YBZI65DUMKBSQ3YFBORBCMMIDOKI45U5NGJSP5WDX2UMND3IDSB3WNNCBN2KBQH56DWTVIGR52VYHR4WR7FUSOKO74UXGII"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.60f1cbac-5f3a-42a9-8a37-6f35081e6f23",
+    "locale": "en-GB",
+    "timestamp": "2017-01-17T21:45:14Z",
+    "intent": {
+      "name": "MaxVolumeIntent",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}
+
+},
+{
+"name": "MUTE",
+"event":
+
+{
+  "session": {
+    "sessionId": "SessionId.2246f761-d743-4946-a190-6604efeea7f5",
+    "application": {
+      "applicationId": "amzn1.ask.skill.241dd49d-f4b0-4d82-aa01-9b4ebe395bea"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AEX5LWI36SNWPZTBBABCDNABD55ZAYB6SQ643FPSS3UDWE6ZWJ4IQQOMIQWQV6U4YZTF2D3YTJUTBY7JFAAQDFVASYZVWBMNHO4JWUR7MC7VTDF3YBZI65DUMKBSQ3YFBORBCMMIDOKI45U5NGJSP5WDX2UMND3IDSB3WNNCBN2KBQH56DWTVIGR52VYHR4WR7FUSOKO74UXGII"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.fab4d0cb-9ae6-45ec-a7fe-423be8a9a56b",
+    "locale": "en-GB",
+    "timestamp": "2017-01-17T21:46:06Z",
+    "intent": {
+      "name": "MuteIntent",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}
+
+},
+{
+"name": "UNMUTE",
+"event":
+
+{
+  "session": {
+    "sessionId": "SessionId.2246f761-d743-4946-a190-6604efeea7f5",
+    "application": {
+      "applicationId": "amzn1.ask.skill.241dd49d-f4b0-4d82-aa01-9b4ebe395bea"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AEX5LWI36SNWPZTBBABCDNABD55ZAYB6SQ643FPSS3UDWE6ZWJ4IQQOMIQWQV6U4YZTF2D3YTJUTBY7JFAAQDFVASYZVWBMNHO4JWUR7MC7VTDF3YBZI65DUMKBSQ3YFBORBCMMIDOKI45U5NGJSP5WDX2UMND3IDSB3WNNCBN2KBQH56DWTVIGR52VYHR4WR7FUSOKO74UXGII"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.fab4d0cb-9ae6-45ec-a7fe-423be8a9a56b",
+    "locale": "en-GB",
+    "timestamp": "2017-01-17T21:46:06Z",
+    "intent": {
+      "name": "UnMuteIntent",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}
+
+}
+]

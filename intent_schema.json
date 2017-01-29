@@ -1,0 +1,46 @@
+{
+    "intents": [
+        {
+            "intent": "PlayPolishRadioIntent",
+            "slots": [
+                {
+                    "name": "Number",
+                    "type": "AMAZON.NUMBER"
+                }
+            ]
+        },
+        {
+            "intent": "AMAZON.StopIntent"
+        },
+        {
+            "intent": "VolumeUpIntent"
+        },
+        {
+            "intent": "VolumeDownIntent"
+        },
+        {
+            "intent": "MuteIntent"
+        },
+        {
+            "intent": "UnMuteIntent"
+        },
+        {
+            "intent": "SetVolumeIntent",
+            "slots": [
+                {
+                    "name": "Number",
+                    "type": "AMAZON.NUMBER"
+                }
+            ]
+        },
+        {
+            "intent": "AmbiguousNumberIntent",
+            "slots": [
+                {
+                    "name": "Number",
+                    "type": "AMAZON.NUMBER"
+                }
+            ]
+        }
+    ]
+}

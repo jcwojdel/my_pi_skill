@@ -1,0 +1,35 @@
+PlayPolishRadioIntent play polish radio {Number}
+PlayPolishRadioIntent play radio {Number}
+PlayPolishRadioIntent play radio
+PlayPolishRadioIntent play polish radio
+PlayPolishRadioIntent play some radio
+PlayPolishRadioIntent polish radio {Number}
+PlayPolishRadioIntent radio {Number}
+
+VolumeUpIntent volume up
+VolumeUpIntent rise volume
+VolumeUpIntent pump up the volume
+VolumeUpIntent louder
+VolumeUpIntent be louder
+VolumeUpIntent loud
+VolumeUpIntent be loud
+
+VolumeDownIntent volume down
+VolumeDownIntent lower volume
+VolumeDownIntent quiet
+VolumeDownIntent be quiet
+VolumeDownIntent quieter
+VolumeDownIntent be quieter
+
+SetVolumeIntent set volume to {Number}
+SetVolumeIntent set volume
+
+MuteIntent mute sound
+MuteIntent mute radio
+MuteIntent mute
+
+UnMuteIntent unmute sound
+UnMuteIntent unmute radio
+UnMuteIntent unmute
+
+AmbiguousNumberIntent {Number}
