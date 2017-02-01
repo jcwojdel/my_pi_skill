@@ -6,7 +6,7 @@ import base64
 import os
 
 SECRET = os.environ['SECRET']
-MYPI_HOST = os.environ['HOST']
+HOST = os.environ['HOST']
 
 
 def get_intent(event):
@@ -38,7 +38,7 @@ class RadioController(object):
         if 1 <= channel_num <= 4:
             url = 'http://stream3.polskieradio.pl:890{}/listen.pls'.format(2 * (channel_num - 1))
         else:
-            return self.ask_for_details('I don\'t know this radio. Which other Polish radio would you like to play?',
+            return self.ask_for_details('I dont know this radio. Which other Polish radio would you like to play?',
                                         session_attr={'Context': 'Radio'})
 
         self.request_method('Player.Open', item={'file': url})
@@ -113,10 +113,8 @@ class SkillController(object):
 
     def ask_for_details(self, text, session_attr=None):
         data = self.respond_simple_text(text)
-
         data["response"]["shouldEndSession"] = False
         data['sessionAttributes'] = session_attr or {}
-
         return data
 
     def respond_simple_text(self, text):
@@ -150,39 +148,51 @@ class PiController(object):
 
         return rpc
 
-    def build_current_password(self):
-        date = datetime.date.today().strftime('%Y%m%d')
+    def build_current_password(self, offset):
+        date = (datetime.datetime.utcnow() + offset).strftime('%Y%m%d%H')
+        print 'Using date {}'.format(date)
         seeded_secret = '{}{}'.format(date, SECRET)
         md5 = hashlib.md5(seeded_secret)
         return md5.hexdigest()
 
-    def request_method(self, method_name, **kwargs):
-        data = self.build_jsonrpc(method_name, **kwargs)
-        password = self.build_current_password()
+    def post_data(self, data, minutes):
+        offset = datetime.timedelta(minutes=minutes)
+        password = self.build_current_password(offset)
         auth = base64.b64encode('kodi:{}'.format(password))
-
         headers = {
             'Content-type': 'application/json',
             'Accept': 'application/json',
             'Authorization': 'Basic {}'.format(auth)
         }
-        conn = httplib.HTTPConnection('wojdel.ddns.net')
+        conn = httplib.HTTPConnection(HOST)
         conn.request('POST', '/jsonrpc', json.dumps(data), headers)
         response = conn.getresponse()
-        if response.status != 200:
-            raise Exception('Failure to communicate with PI: {} - {}'.format(response.status, response.reason))
+        return response
 
-        ret_data = json.loads(response.read())
+    def request_method(self, method_name, **kwargs):
+        data = self.build_jsonrpc(method_name, **kwargs)
+        for minutes in [-5, 0, 5]:
+            response = self.post_data(data, minutes)
 
-        # Yes, all of the above is:
-        #basic_auth = requests.auth.HTTPBasicAuth('kodi', password)
-        #res = requests.post('http://wojdel.ddns.net/jsonrpc', json=data, auth=basic_auth)
-        #ret_data = res.json()
+            if response.status == 401:
+                continue
 
-        if 'error' in ret_data:
-            raise Exception(ret_data['error'])
+            if response.status != 200:
+                raise Exception('Failure to communicate with PI: {} - {}'.format(response.status, response.reason))
 
-        return ret_data['result']
+            ret_data = json.loads(response.read())
+
+            # Yes, all of the above is:
+            #basic_auth = requests.auth.HTTPBasicAuth('kodi', password)
+            #res = requests.post('http://wojdel.ddns.net/jsonrpc', json=data, auth=basic_auth)
+            #ret_data = res.json()
+
+            if 'error' in ret_data:
+                raise Exception(ret_data['error'])
+
+            return ret_data['result']
+
+        raise Exception('Failure to communicate with PI: {} - {}'.format(response.status, response.reason))
 
 
 class MyPiRadioSkill(RadioController, PiController, SkillController):
